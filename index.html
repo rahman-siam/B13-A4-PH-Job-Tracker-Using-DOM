@@ -40,8 +40,8 @@
 </head>
 
 <body class="w-11/12 sm:w-8/12 mx-auto bg-[#f8fafc]">
-    <header>
-        <div class="mt-15 space-y-5">
+    <header class="sticky top-0 z-50 bg-[#f8fafc]">
+        <div class="pt-15 space-y-5  ">
             <h1 class="text-2xl font-extrabold">Job Application Tracker</h1>
 
             <div class="grid grid-cols-3 gap-2 sm:gap-4 w-full">
@@ -49,7 +49,7 @@
                 <!-- Card 1 -->
                 <div class="bg-white p-3 sm:p-6 shadow rounded-lg w-full">
                     <h4 class="text-xs sm:text-xl font-semibold text-slate-500">Total</h4>
-                    <p class="text-lg sm:text-xl font-bold">8</p>
+                    <p id="total-count" class="text-lg sm:text-xl font-bold">8</p>
                 </div>
 
                 <!-- Card 2 -->
@@ -76,7 +76,7 @@
         <section class="space-y-5">
             <div class="flex justify-between items-center">
                 <h1 class="text-xl font-bold text-slate-900">Available Jobs</h1>
-                <span class="text-sm font-medium text-slate-500">8 jobs</span>
+                <p class="text-sm font-medium text-slate-500"><span id="job-count">8</span> jobs</p>
             </div>
             <div class="button">
                 <button class="btn  bg-blue-500! text-white px-10 shadow">All</button>
@@ -86,14 +86,14 @@
 
 
             <!-- Job 1 -->
-            <div class="job-1 p-3 sm:p-6 shadow rounded-lg w-full mt-10 bg-white!">
+            <div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
                 <div class="mx-2 sm:mx-7 ">
 
                     <div class=" flex justify-between ">
                         <h1 class="text-x font-bold text-slate-600">Mobile First Corp</h1>
                         <span
-                            class="border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
-                            <i class="fa-solid fa-trash-can"></i>
+                            class="delete-button border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
+                            <i class=" fa-solid fa-trash-can"></i>
                         </span>
                     </div>
 
@@ -107,7 +107,7 @@
                         Work on products used by millions of users worldwide.</p>
                     <br>
                     <button class="btn border border-green-400 bg-white! text-green-400 px-5 shadow">INTERVIEW</button>
-                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REGECTED</button>
+                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REJECTED</button>
                 </div>
             </div>
             <!-- Job 2 -->
@@ -117,8 +117,8 @@
                     <div class=" flex justify-between ">
                         <h1 class="text-x font-bold text-slate-600">WebFlow Agency</h1>
                         <span
-                            class="border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
-                            <i class="fa-solid fa-trash-can"></i>
+                            class="delete-button border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
+                            <i class=" fa-solid fa-trash-can"></i>
                         </span>
                     </div>
 
@@ -132,18 +132,18 @@
                         have portfolio and experience with modern web design trends.</p>
                     <br>
                     <button class="btn border border-green-400 bg-white! text-green-400 px-5 shadow">INTERVIEW</button>
-                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REGECTED</button>
+                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REJECTED</button>
                 </div>
             </div>
             <!-- Job 3 -->
-              <div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
+            <div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
                 <div class="mx-2 sm:mx-7 ">
 
                     <div class=" flex justify-between ">
                         <h1 class="text-x font-bold text-slate-600">DataViz Solutions</h1>
                         <span
-                            class="border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
-                            <i class="fa-solid fa-trash-can"></i>
+                            class="delete-button border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
+                            <i class=" fa-solid fa-trash-can"></i>
                         </span>
                     </div>
 
@@ -153,23 +153,24 @@
                     <br>
                     <button class="btn  bg-[#EEF4FF]! text-black px-5 shadow">NOT APPLIED</button>
                     <br><br>
-                    <p class="text-slate-400 text-[13px]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
-</p>
+                    <p class="text-slate-400 text-[13px]">Transform complex data into compelling visualizations.
+                        Required skills: D3.js, React, and strong analytical thinking.
+                    </p>
                     <br>
                     <button class="btn border border-green-400 bg-white! text-green-400 px-5 shadow">INTERVIEW</button>
-                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REGECTED</button>
+                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REJECTED</button>
                 </div>
             </div>
 
             <!-- Job 4 -->
-<div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
+            <div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
                 <div class="mx-2 sm:mx-7 ">
 
                     <div class=" flex justify-between ">
                         <h1 class="text-x font-bold text-slate-600">CloudFirst Inc</h1>
                         <span
-                            class="border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
-                            <i class="fa-solid fa-trash-can"></i>
+                            class="delete-button border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
+                            <i class=" fa-solid fa-trash-can"></i>
                         </span>
                     </div>
 
@@ -179,21 +180,22 @@
                     <br>
                     <button class="btn  bg-[#EEF4FF]! text-black px-5 shadow">NOT APPLIED</button>
                     <br><br>
-                    <p class="text-slate-400 text-[13px]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                    <p class="text-slate-400 text-[13px]">Design and maintain scalable backend systems using Python and
+                        AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                     <br>
                     <button class="btn border border-green-400 bg-white! text-green-400 px-5 shadow">INTERVIEW</button>
-                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REGECTED</button>
+                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REJECTED</button>
                 </div>
             </div>
             <!-- Job 5 -->
-<div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
+            <div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
                 <div class="mx-2 sm:mx-7 ">
 
                     <div class=" flex justify-between ">
                         <h1 class="text-x font-bold text-slate-600">Innovation Labs</h1>
                         <span
-                            class="border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
-                            <i class="fa-solid fa-trash-can"></i>
+                            class="delete-button border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
+                            <i class=" fa-solid fa-trash-can"></i>
                         </span>
                     </div>
 
@@ -203,21 +205,22 @@
                     <br>
                     <button class="btn  bg-[#EEF4FF]! text-black px-5 shadow">NOT APPLIED</button>
                     <br><br>
-                    <p class="text-slate-400 text-[13px]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                    <p class="text-slate-400 text-[13px]">Create beautiful and functional user interfaces for our suite
+                        of products. Strong design skills and frontend development expertise required.</p>
                     <br>
                     <button class="btn border border-green-400 bg-white! text-green-400 px-5 shadow">INTERVIEW</button>
-                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REGECTED</button>
+                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REJECTED</button>
                 </div>
             </div>
             <!-- Job 6 -->
-<div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
+            <div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
                 <div class="mx-2 sm:mx-7 ">
 
                     <div class=" flex justify-between ">
                         <h1 class="text-x font-bold text-slate-600">MegaCorp Solutions</h1>
                         <span
-                            class="border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
-                            <i class="fa-solid fa-trash-can"></i>
+                            class="delete-button border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
+                            <i class=" fa-solid fa-trash-can"></i>
                         </span>
                     </div>
 
@@ -227,21 +230,23 @@
                     <br>
                     <button class="btn  bg-[#EEF4FF]! text-black px-5 shadow">NOT APPLIED</button>
                     <br><br>
-                    <p class="text-slate-400 text-[13px]">Passionate JavaScript Developer with a strong foundation in building dynamic, responsive, and user-centric web applications. Adept at turning complex requirements into clean, scalable, and high-performance code </p>
+                    <p class="text-slate-400 text-[13px]">Passionate JavaScript Developer with a strong foundation in
+                        building dynamic, responsive, and user-centric web applications. Adept at turning complex
+                        requirements into clean, scalable, and high-performance code </p>
                     <br>
                     <button class="btn border border-green-400 bg-white! text-green-400 px-5 shadow">INTERVIEW</button>
-                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REGECTED</button>
+                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REJECTED</button>
                 </div>
             </div>
             <!-- Job 7 -->
-<div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
+            <div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
                 <div class="mx-2 sm:mx-7 ">
 
                     <div class=" flex justify-between ">
                         <h1 class="text-x font-bold text-slate-600">StartupXYZ</h1>
                         <span
-                            class="border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
-                            <i class="fa-solid fa-trash-can"></i>
+                            class="delete-button border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
+                            <i class=" fa-solid fa-trash-can"></i>
                         </span>
                     </div>
 
@@ -251,21 +256,22 @@
                     <br>
                     <button class="btn  bg-[#EEF4FF]! text-black px-5 shadow">NOT APPLIED</button>
                     <br><br>
-                    <p class="text-slate-400 text-[13px]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included. </p>
+                    <p class="text-slate-400 text-[13px]">Join our fast-growing startup and work on our core platform.
+                        Experience with Node.js and React required. Great benefits and equity package included. </p>
                     <br>
                     <button class="btn border border-green-400 bg-white! text-green-400 px-5 shadow">INTERVIEW</button>
-                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REGECTED</button>
+                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REJECTED</button>
                 </div>
             </div>
             <!-- Job 8 -->
-<div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
+            <div class="job-1 bg-white p-3 sm:p-6 shadow rounded-lg w-full mt-10 ">
                 <div class="mx-2 sm:mx-7 ">
 
                     <div class=" flex justify-between ">
                         <h1 class="text-x font-bold text-slate-600">TechCorp Industries</h1>
                         <span
-                            class="border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
-                            <i class="fa-solid fa-trash-can"></i>
+                            class="delete-button border border-slate-300 rounded-full p-2 inline-flex items-center justify-center hover:text-red-600 transition-colors cursor-pointer active:text-red-700">
+                            <i class=" fa-solid fa-trash-can"></i>
                         </span>
                     </div>
 
@@ -275,15 +281,20 @@
                     <br>
                     <button class="btn  bg-[#EEF4FF]! text-black px-5 shadow">NOT APPLIED</button>
                     <br><br>
-                    <p class="text-slate-400 text-[13px]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                    <p class="text-slate-400 text-[13px]">We are looking for an experienced Frontend Developer to build
+                        scalable web applications using React and TypeScript. You will work with a talented team on
+                        cutting-edge projects.</p>
                     <br>
                     <button class="btn border border-green-400 bg-white! text-green-400 px-5 shadow">INTERVIEW</button>
-                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REGECTED</button>
+                    <button class="btn border border-red-500 bg-white! text-red-500 px-5 shadow">REJECTED</button>
                 </div>
             </div>
         </section>
     </main>
 
+
+
+    <script src="/sript/script.js"></script>
 </body>
 
 </html>
