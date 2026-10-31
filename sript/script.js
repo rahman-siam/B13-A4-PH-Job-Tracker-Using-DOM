@@ -13,6 +13,10 @@ for (const deleted of allDelete) {
     totalCount.innerText=remaining;
     const totalJobs=document.getElementById("job-count");
     totalJobs.innerText=remaining;
+
+    if(remaining===0){
+        document.getElementById("no-job-section").classList.remove("hidden");
+    }
        
     });
 }
